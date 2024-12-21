@@ -1,0 +1,40 @@
+
+
+<!--1st Method :- if we want to use as a function -->
+<!-- <p
+ [ngStyle] = "{
+    backgroundColor : setBgColor()
+ }"
+>
+    The product Name is {{productName}} with id {{productId}}.
+</p> -->
+
+<!--2nd method :- if we don't want to treat funcion as a function -->
+<!-- <p
+ [ngStyle] = "{
+    backgroundColor : setBgColor
+ }"
+>
+    The product Name is {{productName}} with id {{productId}}.
+</p> -->
+
+<!--3rd method :- we can use it directly also-->
+
+<p
+ [ngStyle] = "{
+    backgroundColor : isProductAvailable ? 'orange' : '#ededed'
+ }"
+
+ [ngClass] = "{
+    'text-white' : isProductAvailable,
+    'text-danger' : !isProductAvailable
+ }"
+>
+    The product Name is {{productName}} with id {{productId}} 
+    <strong>{{isProductAvailable ? "and the product is available" : "and the product is not available"}}</strong>
+    <!-- <strong *ngIf="isProductAvailable">and the product is available</strong>
+    <strong *ngIf="!isProductAvailable">and the product is not available</strong> -->
+</p>
+
+
+

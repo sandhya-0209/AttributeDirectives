@@ -1,0 +1,42 @@
+
+<h2>Strucural Drectives !!!</h2>
+<!-- <button class="btn btn-info"
+(click)="onHideShow()"
+>Click
+</button> -->
+<!-- <hr> -->
+<!-- 1st Method:- to hide box using ngClass -->
+<!-- <div class="box"
+[ngClass] = "{
+    'd-none' : !isHide
+}"
+>
+</div> -->
+<!-- 2nd Method:- to hide box using ngIf -->
+<!-- <div class="box mb-5"
+*ngIf = 'isShow'
+>
+</div> -->
+
+
+<!-- 3rd Method:- on button click -->
+<!-- <button class="btn btn-info"
+(click)="onHideShow()"
+>Click
+</button>
+<hr>
+<div class="box mb-5"
+*ngIf = 'isShow'
+>
+</div> -->
+
+<!-- 4th Method:- we can use property directly on click button -->
+<button class="btn btn-info"
+(click)="isShow= !isShow"
+>{{isShow ? 'Hide' : 'Show'}}
+</button>
+<hr>
+<div class="box mb-5"
+*ngIf = 'isShow'
+>
+</div>
